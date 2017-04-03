@@ -10,19 +10,33 @@ function capfirst($word) {
   return $word;
 }
 
-function makeCoffee($type) {
-  if ($type == 'coffee') {
+function makedimsum($type) {
+  if ($type == 'dimsum') {
     $valid = true;
-    $description = 'It&rsquo;s a bean juice that gives people energy; it becomes espresso in it&rsquo;s highly concetrated form.';
-  } else if ($type == 'latte') {
+    $description = 'A Chinese dish of small steamed or fried savory dumplings containing various fillings, served as a snack or main course.';
+  } else if ($type == 'ha-gow') {
     $valid = true;
-    $description = 'A latte is a shortened version of the Italian word, caffè latte, which means milk coffee. Lattes contain a shot of espresso and steamed milk.';
-  } else if ($type == 'mocha') {
+    $description = 'Ha gow is a traditional Cantonese dumpling served in dim sum. The dumpling is sometimes called a shrimp bonnet for its pleated shape.';
+  } 
+    else if ($type == 'shu-mai') {
     $valid = true;
-    $description = 'Chocolate milk coffee, basically.';
-  } else if ($type == 'espresso') {
+    $description = 'Shu-mai or siu mai, the Chinese steamed pork and shrimp dumplings, are one of the most popular items at dim sum parlors. But you dont have to go out just to enjoy them, because they&#8217re one of the easiest dumplings to make at home.</p>';
+  } 
+    else if ($type == 'phoenix-claws') {
     $valid = true;
-    $description = 'Highly concentrated Italian coffee served in a single standard shot.';
+    $description = 'To a dim sum newbie, braised chicken feet (a.k.a. Phoenix Claws) can look as intimidating to eat as it sounds. Plump braised chicken feet sticking out of a small bowl—it&rsquo;s a dish for those who love cartilage, skin, and bones.';
+  } 
+    else if ($type == 'dan-tat') {
+    $valid = true;
+    $description = 'The egg tart (commonly romanized as daahn tāat (Cantonese Yale: daan6 taat1), dàn tǎ (Mandarin), or dan tat) is a kind of custard tart found in Hong Kong, Portugal, Brazil, Britain, and various Asian countries, which consists of an outer pastry crust and is filled with egg custard and baked.';
+  }
+     else if ($type == 'luo-buo-gao') {
+    $valid = true;
+    $description = 'Pan-fried radish cakes.';
+  } 
+    else if ($type == 'cha-siu-bao') {
+    $valid = true;
+    $description = 'Cha siu bao is a Cantonese barbecue-pork-filled bun. The buns are filled with barbecue-flavored cha siu pork. They are served as a type of dim sum during yum cha and are sometimes sold in Chinese bakeries.';
   } else {
     $valid = false;
   };
@@ -43,7 +57,7 @@ function makeCoffee($type) {
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <p class="m-0"><strong>'.capfirst($type).'? Gross!</strong> Enter something good next time.</p>
+        <p class="m-0"><strong>'.capfirst($type).'? Sorry, we can&rsquo;t seem to find that.</strong> Please try a different submission.</p>
       </div>
     ');
   }
